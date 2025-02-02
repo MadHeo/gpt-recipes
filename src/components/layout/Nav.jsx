@@ -2,12 +2,13 @@ import { Box, Button, Text, VStack } from "@chakra-ui/react";
 
 export default function Nav() {
   return (
-    <VStack
-      h={"100vh"}
-      w={"350px"}
-      bg={"none"}
-      justifyContent={"space-between"}
-      alignItems={"start"}
+    <Box
+      h={{ base: "100px", md: "100vh" }}
+      w={{ base: "100%", md: "350px" }}
+      display={"flex"}
+      flexDirection={{ base: "row", md: "column" }}
+      justifyContent={{ base: "center", md: "space-between" }}
+      alignItems={{ base: "center", md: "start" }}
       p={"100px 86px"}
     >
       <Button
@@ -28,10 +29,15 @@ export default function Nav() {
         </Text>
       </Button>
       <Box>
-        <Text fontSize={"16px"} fontWeight={"normal"} color={"gray.100"}>
+        <Text
+          fontSize={"16px"}
+          fontWeight={"normal"}
+          color={"gray.100"}
+          display={{ base: "none", md: "block" }}
+        >
           tnlfl288@gmail.com
         </Text>
       </Box>
-    </VStack>
+    </Box>
   );
 }

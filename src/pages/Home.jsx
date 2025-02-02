@@ -12,7 +12,7 @@ const data = [
 
 export default function Home() {
   return (
-    <Box py={"100px"} px={"16px"}>
+    <Box py={{ base: "40px", md: "100px" }} px={"16px"}>
       <Stack gap="4" direction="row" wrap="wrap">
         {data.map((item, idx) => (
           <CardUi key={idx} {...item} />

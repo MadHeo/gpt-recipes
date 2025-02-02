@@ -8,7 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 
-export default function CardUi({ key, url, title, description, img }) {
+export default function CardUi({ url, title, description, img }) {
   return (
     <Button
       _hover={{ transform: "scale(1.01)" }}
@@ -16,11 +16,10 @@ export default function CardUi({ key, url, title, description, img }) {
       transition={"all 0.1s"}
       boxShadow={"0px 8px 16px rgba(46, 46, 46, 0.16)"}
       bgColor={"#4A4A4A"}
-      w={"360px"}
-      h={"420px"}
+      w={"300px"}
+      h={"360px"}
       p={"0"}
       href={url}
-      key={key}
       borderRadius={"30px"}
       onClick={() => {
         window.open(url, "_blank");
@@ -28,7 +27,7 @@ export default function CardUi({ key, url, title, description, img }) {
     >
       <Card w={"100%"} h={"100%"} bgColor={"#4A4A4A"} borderRadius={"30px"}>
         <CardHeader
-          h={"240px"}
+          h={"200px"}
           p={"0"}
           borderRadius={"30px 30px 0 0"}
           objectFit={"contain"}
