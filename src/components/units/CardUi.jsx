@@ -33,7 +33,13 @@ export default function CardUi({ url, title, description, img }) {
           objectFit={"contain"}
           overflow={"hidden"}
         >
-          <Image src={img} alt={title} />
+          <Image
+            src={img}
+            alt={title}
+            objectFit={"cover"}
+            w={"100%"}
+            height={"100%"}
+          />
         </CardHeader>
         <CardBody h={"180px"} p={"20px"}>
           <VStack gap={"10px"} alignItems={"start"} p={"0 10px"}>
